@@ -42,13 +42,12 @@ simultaneously getting soup.
 **Note:** externs.h must be \#included in Person.cpp and Soupline.cpp in
 order for the linker to find these mutexes.
 
-## Requirements:
+## Instructions:
 
-Please submit the following 2 files only to scholar
+Please fork and clone this project in Gitlab. I will pull all changes from your gitlab repo on the due date.
 
-Person.cpp
-
-Soupline.cpp.
+## Due Date
+Project is due 11/9/21.  
 
 ## Teams
 
