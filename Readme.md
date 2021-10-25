@@ -44,7 +44,7 @@ order for the linker to find these mutexes.
 
 ## Instructions:
 
-Please fork then clone this project to your GitLab account.  **To grade, I will pull your Gitlab repository and evaluate the following 2 files only. <br>
+Please fork this projct to your GitLab account.  Then clone to your local machine.  Please commit all changes to your fork in GitLab.<br>**To grade, I will pull your Gitlab repository and evaluate the following 2 files only. <br>
 Person.cpp <br>
 Soupline.cpp.**
 
