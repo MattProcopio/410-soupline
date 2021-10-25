@@ -44,7 +44,9 @@ order for the linker to find these mutexes.
 
 ## Instructions:
 
-Please fork and clone this project in Gitlab. I will pull all changes from your gitlab repo on the due date.
+Please fork then clone this project to your GitLab account.  To grade, I will pull your Gitlab repository and evaluate the following 2 files only. 
+Person.cpp 
+Soupline.cpp.
 
 ## Due Date
 Project is due 11/9/21.  
