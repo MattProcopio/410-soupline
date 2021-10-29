@@ -47,8 +47,8 @@ public:
 	
 	/***
 	 * Find customer who has had the fewest bowls of soup and return numbBowlsSoup they have had
-	 * If my_customers is empty, return NONE
-	 * @return NONE or int
+	 * If my_customers is empty, return ZERO
+	 * @return ZERO or int
 	 */
 	int getFewestBowlsOfSoupServedToACustomer();
 	
@@ -66,8 +66,8 @@ public:
 	
 	/***
 	 * Find customer who has had the fewest drinks and return numbDrinks they have had
-	 * If my_customers is empty, return NONE
-	 * @return NONE or int
+	 * If my_customers is empty, return ZERO
+	 * @return ZERO or int
 	 */
 	int getFewestDrinksServedToACustomer();
 	
