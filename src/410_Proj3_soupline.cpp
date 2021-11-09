@@ -36,6 +36,8 @@ void doRound(int numbBowlsSoup, int numbDrinks, int numbPeople ) {
 	std::vector<std::thread> vecPeople;
 	//start threads
 	for (int i = 0; i < numbPeople; i++) {
+		//pause to give threads time to start and run 
+		this_thread::sleep_for(chrono::milliseconds(10));
 		vecPeople.push_back(std::thread(thrdfunc, i));
 	}
 	//wait for em to finish

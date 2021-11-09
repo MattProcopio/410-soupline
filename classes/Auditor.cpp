@@ -75,8 +75,8 @@ void Auditor::do_audit(){
 	double mean = soups/numbPeople;
 	
 	if(my_customers.size()>0){
-		int defaultsoup=my_customers[0].numbBowlsSoup;
-		int defaultdrinks=my_customers[0].numbDrinks;
+		int defaultsoup=numbBowlsSoup/my_customers.size();
+		int defaultdrinks=numbDrinks/my_customers.size();
 		for (auto& t : my_customers){
 			EXPECT_EQ((std::abs(t.numbBowlsSoup-defaultsoup)<=1), true, string("checking person "+std::to_string(t.personID)+"\t number soups="+std::to_string(t.numbBowlsSoup)), 1);	
 		}
