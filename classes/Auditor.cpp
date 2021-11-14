@@ -32,6 +32,19 @@ bool EXPECT_EQ(T expectedVal, U actualVal,string testnumb , int pts){
 	cout<<endl;
 	return bout;
 }
+template<typename T, typename U>
+bool EXPECT_NEARLY_EQ(T expectedVal, U actualVal,string testnumb , int pts, int range=1){
+	bool bout = ((std::abs(expectedVal - actualVal) <=range));
+	if (bout){
+		total_points+=pts;
+		cout<<"SUCCESS "+testnumb+ "\t total points="<<total_points;
+		
+	}
+	else
+		cout<<"FAIL "+ testnumb<< "\t Expected:"<<expectedVal<<"  got:"<<actualVal;
+	cout<<endl;
+	return bout;
+}
 
 Auditor::Auditor() {}
 /***
@@ -78,10 +91,12 @@ void Auditor::do_audit(){
 		int defaultsoup=numbBowlsSoup/my_customers.size();
 		int defaultdrinks=numbDrinks/my_customers.size();
 		for (auto& t : my_customers){
-			EXPECT_EQ((std::abs(t.numbBowlsSoup-defaultsoup)<=1), true, string("checking person "+std::to_string(t.personID)+"\t number soups="+std::to_string(t.numbBowlsSoup)), 1);	
+			EXPECT_NEARLY_EQ(t.numbBowlsSoup,defaultsoup,string("checking person "+std::to_string(t.personID)+"\t number soups="+std::to_string(t.numbBowlsSoup))+ ",correct soups="+std::to_string(defaultsoup), 1);
+//			EXPECT_EQ((std::abs(t.numbBowlsSoup-defaultsoup)<=1), true, string("checking person "+std::to_string(t.personID)+"\t number soups="+std::to_string(t.numbBowlsSoup)), 1);	
 		}
 		for (auto& t : my_customers){
-			EXPECT_EQ((std::abs(t.numbDrinks-defaultdrinks)<=1), true, string("checking person "+std::to_string(t.personID)+"\t number drinks="+std::to_string(t.numbDrinks)), 1);	
+			EXPECT_NEARLY_EQ(t.numbDrinks,defaultdrinks,string("checking person "+std::to_string(t.personID)+"\t number drinks="+std::to_string(t.numbDrinks))+ ",correct drinks="+std::to_string(defaultdrinks), 1);
+//			EXPECT_EQ((std::abs(t.numbDrinks-defaultdrinks)<=1), true, string("checking person "+std::to_string(t.personID)+"\t number drinks="+std::to_string(t.numbDrinks)), 1);	
 		}
 	}		
 }

@@ -10,8 +10,8 @@
 const int MILLI_SECONDS_TO_WAIT = 1;
 const int NUMBER_PEOPLE		=20;
 
-const int INITIAL_BOWLS_SOUP = 519;
-const int INITIAL_DRINKS = 188;
+const int INITIAL_BOWLS_SOUP = 10000;
+const int INITIAL_DRINKS = 10000;
 
 const int BOWL_OF_SOUP = 1;
 const int DRINK =1;
