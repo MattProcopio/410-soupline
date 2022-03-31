@@ -74,7 +74,7 @@ using namespace std;
 		//int test1 = getFewestBowlsOfSoupServedToACustomer();
 		//int test2 = my_customers[index].numbBowlsSoup;
 
-		if (getFewestBowlsOfSoupServedToACustomer() < my_customers[index].numbBowlsSoup) {
+		if (getFewestBowlsOfSoupServedToACustomer() < my_customers[index].numbBowlsSoup || count <= 1) {
 			return NOT_YOUR_TURN;
 		}
 		my_customers[index].numbBowlsSoup++;
@@ -134,7 +134,7 @@ using namespace std;
 			return DRINK;
 		}
 
-		if (getFewestDrinksServedToACustomer() < my_customers[index].numbDrinks) {
+		if (getFewestDrinksServedToACustomer() < my_customers[index].numbDrinks || count <= 1) {
 			return NOT_YOUR_TURN;
 		}
 		my_customers[index].numbDrinks++;

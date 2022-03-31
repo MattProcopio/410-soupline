@@ -75,7 +75,6 @@ void Person::eatlunch() {
 			}
 			if (soup == BOWL_OF_SOUP) {
 				numbBowlsSoupEaten++;
-				this_thread::sleep_for(chrono::milliseconds(MILLI_SECONDS_TO_WAIT));
 			}
 			if (soup == OUT_OF_SOUP) {
 				hasSoup = false;
@@ -90,7 +89,6 @@ void Person::eatlunch() {
 			}
 			if (drink == DRINK) {
 				numbDrinksDrunk++;
-				this_thread::sleep_for(chrono::milliseconds(MILLI_SECONDS_TO_WAIT));
 			}
 			if (drink == OUT_OF_DRINKS) {
 				hasDrink = false;
